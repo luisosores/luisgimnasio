@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+/*                                      contenedor del video                                         */
+.contenedor-video , .contenedor{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.frente{
+    display: flex;
+    padding: 10px;
+    height: 600px;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
+    z-index: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+.frente h1, a{
+    color: #12C6DD;
+}
+.frente h1{font-size: 5rem;}
+.frente a{font-size: 1.5em; color: #12C6DD;}
+.frente p{font-size: 2rem;color:rgb(255, 255, 255);}
+
+.boton{
+    background-color: transparent;
+    opacity: 0.5;
+	border-radius:23px;
+	border:3px solid #12C6DD;
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(255, 255, 255);
+	font-size:28px;
+	padding:17px 56px;
+	text-decoration:none;
+}
+.boton:hover {
+	background-color:#12C6DD;
+    color:  #ffffff;
+    opacity: 3;
+}
+.boton:active {
+	position:relative;
+	top:1px;
+}
+video{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    z-index: -2;
+    filter: contrast(166%);/* reemplaza la clase "capa"*/
+}
+/*                                          FIN                                                         */
+.contenedor, .contenedor2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 300px;
+    grid-template-areas:
+        "cabecera"
+        "main"
+        "footer";
+    
+}
+  
+header{
+    background-color: #000000;
+    grid-area: cabecera;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2em;
+}
+  
+.main1{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 600px 1300px 1300px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas:
+            "seccion1"
+            "seccion2"
+            "seccion3";
+
+}
+.bloque1{
+    grid-area: seccion1;
+    background-image: url(../img/00.jpg);
+}
+.bloque2{
+    grid-area: seccion2;
+}
+.bloque3{
+    grid-area: seccion3;
+    background-image: url(../img/05.jpg);
+}
+.bloque1, .bloque3, .seccion1, .seccion4, .seccion5{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bloque2, .bloque3, .popular{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+/*                                Caja Precio Bloque1                            */
+.caja3{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 100%;
+    padding-left: 10px;
+}
+.caja3 h1{
+    padding: 10px;
+    font-size: 90px;
+    color:#12C6DD;
+}
+.caja3 p{
+    padding: 10px;
+    font-size: 30px;
+    color:#ffffff;
+}
+
+/*                                Caja Precio Bloque2                            */
+.caja{
+    text-align: center;
+    width: 60%;
+    height: 500px;
+    border: 2px solid #12C6DD;
+    background-color: rgb(255, 255, 255);
+    
+}
+.caja div{
+    height: 100px;
+    padding: 15px;
+    background-color: #12C6DD;
+    color: rgb(255, 255, 255);
+}
+.precio h3{
+    color: #000000;
+}
+.precio h2{
+    font-size: 30px;
+    color: #ffffff;
+}
+.caja ul{
+    height: 40px;
+}
+.caja ul li{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+.color_li, .color_li2, .color_li3{
+    border: 1px solid #beffeb;
+    background-color: #beffeb;
+}
+.color_li2{
+    background-color:#ffffff;
+}
+.color_li2, .color_li3{
+    text-decoration:line-through;
+}
+.botonPrecio{
+    background-color: #12C6DD;
+    opacity: 0.5;
+	border-radius:15px;
+	border:3px solid #12C6DD;
+	display:inline-block;
+	cursor:pointer;
+	color:rgb(255, 255, 255);
+	font-size:28px;
+	padding: 10px;
+	text-decoration:none;
+    position: relative;
+    top: 250px;
+    
+}
+/*                                          FIn                                 */
+/*                                Caja Precio Bloque3                            */
+.caja2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+    width: 90%;
+    height: 400px;
+    border: 2px solid #b8b8b8a4;
+    font-weight: 700;
+    
+}
+
+.caja2 ul li{
+    width: 400px;
+    height: 80px;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+/*                                          FIn                                 */
+footer {
+    display: flex;
+    padding: 80px;
+    flex-direction: column-reverse;
+    justify-content:space-between;
+    align-items:center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    grid-area: footer;
+}
+footer h6, h5{
+    font-size: 1.5em;
+}
+
+/*                                      Navegador Menu                          */
+/*.menu{
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    padding-right: 40px;
+}*/
+.nav{
+    height: 50px;
+    width: auto;
+    display: none;
+    
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    display: block;    
+    padding: 20px 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+ul li a:hover{
+    color: #12C6DD;
+}
+
+
+/*                                Fin     Navegador Menu                          */
+/*                                      Formulario                                  */
+
+/*                                    FIN Formulario                                  */
+/*                                  Main2                                       */
+.main2{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 600px 870px 870px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas:
+            "seccion1"
+            "seccion2"
+            "seccion3";
+
+}
+.seccion1{
+    grid-area: seccion1;
+    background-image: url(../img/02.jpg);
+    
+}
+.seccion2{
+    grid-area: seccion2;
+}
+.seccion3{
+    grid-area: seccion3;
+}
+.titulo{
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.caja4 img{
+    width: 450px;
+}
+.caja4 h3{
+    padding-bottom: 20px;
+}
+.caja4 img:hover{
+    opacity: 0.5;
+}
+/*                                  Main3                                       */
+.main3{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 600px 600px 600px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas:
+            "seccion1"
+            "seccion2"
+            "seccion3";
+
+}
+.seccion4{
+    grid-area: seccion1;
+    background-image: url(../img/contacto2.jpg);
+}
+.seccion5{
+    grid-area: seccion2;
+    background-image: url(/img/contacto1.jpg);
+}
+.seccion6{
+    grid-area: seccion3;
+}
+.contenedorFormulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgForm{
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: fixed;
+    
+}
+.formulario{
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    outline: none;
+}
+.formulario h4{
+    font-size: 30px;
+    color:  #12C6DD;
+}
+.botonFormulario{
+    opacity: 0.7;
+	border-radius:23px;
+	border:3px solid #12C6DD;
+	display:inline-block;
+	cursor:pointer;
+	color:#12C6DD;
+	font-size:28px;
+	padding:17px 56px;
+	text-decoration:none;
+}
+.botonFormulario:hover{    
+	background-color:#EE3497;
+    border:3px solid #EE3497;
+    color:  #ffffff;
+    opacity: 3;
+}
+iframe{
+    width: 100%;
+	height: 600px;
+}
+/*                                FIN  Main3                                    */
+@media only screen and (min-width: 768px) {
+    
+    .bloque2, .bloque3, .popular{
+        flex-direction: row;
+    }
+    .caja{
+        width: 400px;
+        
+    }
+    .caja2{
+        flex-direction: row;
+        width: 400px;
+        
+    }
+    .main1{
+        grid-template-rows: 600px 600px 600px;
+    
+    }
+    .main2{
+        grid-template-rows: 600px 600px 600px;
+    }
+    .contenedor{
+        grid-template-rows: 70px 1800px 300px;
+        
+    }
+    header{
+        justify-content: flex-end;
+    }
+    footer , .seccion5{
+        flex-direction: row;
+    }
+    .nav{
+        display: block;
+        padding-right: 30px;
+    }
+    .contenedorFormulario{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .formulario{
+        width: 500px;
+        padding-right: 30px;
+        justify-content: flex-end;
+    }
+}
