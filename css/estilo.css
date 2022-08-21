@@ -253,9 +253,21 @@ ul li a{
     padding: 20px 20px;
     text-decoration: none;
     color: rgb(255, 255, 255);
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+ul li a::after{
+    content: "";
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: #12C6DD;;
+    width: 90%;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
 }
 ul li a:hover{
     color: #12C6DD;
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 
